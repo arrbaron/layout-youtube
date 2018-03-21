@@ -1,0 +1,82 @@
+:root {
+  --opacity: 0.3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.reference {
+  position: absolute;
+  opacity: var(--opacity);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.opacity-controls {
+  position: absolute;
+  z-index: 11;
+  right: 300px;
+}
+
+.container {
+  position: absolute;
+  display: grid;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  grid-template-columns: 1fr 530px;
+  grid-template-rows: 60px 1fr;
+}
+
+/* ============= NAV ============= */
+
+nav {
+  background: cornflowerblue;
+  grid-column: 1 / 3;
+  padding: 15px 22px 15px 25px;
+}
+
+nav * {
+  display: inline-block;
+}
+
+.hamburger {
+  padding-top: 3px;
+}
+
+.hamburger img {
+  width: 20px;
+  height: 20px;
+}
+
+.logo {
+  margin-left: 20px;
+}
+
+.logo img {
+  width: 80px;
+  height: 24px;
+}
+
+.search {
+  margin-left: 100px;
+  border: 1px solid ghostwhite;
+  border-radius: 3px;
+}
+
+.search input {
+  width: 600px;
+}
+
+main {
+  background: crimson;
+}
+
+aside {
+  background: greenyellow;
+}
