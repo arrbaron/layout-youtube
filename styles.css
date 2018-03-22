@@ -16,10 +16,23 @@
   z-index: 10;
 }
 
+label {
+  color: white;
+  font-weight: bold;
+  z-index: 20;
+  display: block;
+}
+
 .opacity-controls {
   position: absolute;
+  background: black;
+  padding: 10px;
   z-index: 11;
   right: 300px;
+}
+
+.opacity-controls input {
+  width: 200px;
 }
 
 .container {
@@ -36,7 +49,7 @@
 /* ============= NAV ============= */
 
 nav {
-  background: cornflowerblue;
+  /* background: cornflowerblue; */
   grid-column: 1 / 3;
   padding: 15px 22px 15px 25px;
   position: relative;
@@ -102,10 +115,176 @@ nav * {
   margin-top: 10px;
 }
 
+/* ============= MAIN ============= */
+
 main {
-  background: crimson;
+  /* background: crimson; */
+  display: grid;
+  grid-template-rows: 740px 1fr;
 }
 
-aside {
+.video {
+  width: 1280px;
+  height: 720px;
+  background: black;
+  margin-top: 20px;
+  margin-left: 100px;
+  display: flex;
+}
+
+.video .controls {
+  width: 100%;
+  height: 38px;
+  background: white;
+  align-self: flex-end;
+  display: flex;
+  padding-left: 20px;
+  position: relative;
+}
+
+.progress {
   background: greenyellow;
+  position: absolute;
+  width: 1260px;
+  height: 5px;
+  left: 10px;
+}
+
+.controls img {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+.controls__left img:nth-of-type(3) {
+  width: 30px;
+  height: 30px;
+}
+
+.controls__right {
+  position: absolute;
+  right: 7px;
+  top: 10px;
+}
+
+.controls__right img {
+  margin-right: 12px;
+}
+
+.info {
+  /* background: green; */
+  margin-left: 100px;
+  position: relative;
+}
+
+.info--right {
+  position: absolute;
+  right: 30px;
+  top: 60px;
+  display: flex;
+}
+
+.info--right > * {
+  width: 20px;
+  height: 20px;
+}
+
+.info--right img {
+  margin-right: 15px;
+}
+
+.info--right img:nth-of-type(3) {
+  margin-right: 5px;
+}
+
+.info--right span:nth-of-type(3) {
+  margin-right: 40px;
+}
+
+.info--right span {
+  margin-right: 20px;
+}
+
+.publisher__info {
+  border-top: 1px solid grey;
+  padding-left: 65px;
+  padding-top: 5px;
+  position: relative;
+}
+
+.subscribe {
+  position: absolute;
+  right: 15px;
+  top: 25px;
+  height: 35px;
+  width: 135px;
+  background: red;
+  color: white;
+  border: none;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  background: black;
+  position: absolute;
+  left: 0;
+  top: 18px;
+  border-radius: 50%;
+}
+
+.track-item:first-of-type {
+  margin-top: 20px;
+}
+
+/* ============= SIDEBAR ============= */
+
+aside {
+  /* background: greenyellow; */
+  padding-left: 15px;
+}
+
+.sidebar__top {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 22px;
+}
+
+.sidebar__top span:nth-of-type(2) {
+  padding-right: 160px;
+}
+
+.sidebar__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 116px repeat(7, 1fr);
+  padding-top: 15px;
+  grid-row-gap: 8px;
+}
+
+.movie {
+  position: relative;
+}
+
+.movie > div:nth-of-type(n + 2) {
+  position: absolute;
+  left: 180px;
+  top: 0;
+}
+
+.movie__preview {
+  background: black;
+  width: 170px;
+  height: 95px;
+}
+
+.movie__info {
+  width: 175px;
+}
+
+.movie__preview--cut {
+  background: black;
+  width: 175px;
+  height: 53px;
+  /* display: none; */
 }
